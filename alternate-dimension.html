@@ -15,25 +15,98 @@
     <span id="clock">00:00:00</span>
   </header>
 
-  <marquee scrollamount="7">WELCOME TO THE OTHER INTERNET • BEST VIEWED AT 800 × 600 • DO NOT CLICK THE WRONG SLASH •</marquee>
+  <marquee scrollamount="7">
+    WELCOME TO THE OTHER INTERNET • BEST VIEWED AT 800 × 600 • DO NOT CLICK THE WRONG SLASH •
+  </marquee>
 
   <main>
     <section class="intro">
       <h1>APPLE CORE TATTOO</h1>
       <p class="warning">This page is not what it seems.</p>
-      <p>
-        <a href="/" id="return-link">return to the normal dimension</a>
-      </p>
+      <p><a href="/">return to the normal dimension</a></p>
     </section>
 
-    <section class="ascii-zone" aria-label="Interactive ASCII apple core">
-      <h2>APPLE_CORE_01.GIF</h2>
-      <pre id="ascii-apple" class="ascii-art" aria-label="Large apple core made of symbols"></pre>
-      <p class="tiny">hint: one mark refuses to behave.</p>
-    </section>
+    <div class="desktop-grid">
+      <section class="ascii-zone apple-zone">
+        <h2>APPLE_CORE_01.GIF</h2>
+        <pre id="ascii-apple" class="ascii-art apple-art" aria-label="Apple Core logo made from symbols"></pre>
+        <p class="tiny">hover around.</p>
+      </section>
 
-    <section class="ascii-zone cool-s-zone" aria-label="Interactive cool S symbol">
-      <h2>COOL_S_FINAL_FINAL2.GIF</h2>
+      <section class="ascii-zone cool-s-zone">
+        <h2>COOL_S_FINAL_FINAL2.GIF</h2>
+        <pre id="cool-s" class="ascii-art cool-s-art" aria-label="Classic 90s cool S made from symbols"></pre>
+      </section>
+
+      <section class="visitor-box">
+        <h2>VISITORS.TXT</h2>
+        <p>you are visitor number:</p>
+        <p id="counter" class="counter">00000001</p>
+        <p>and counting...</p>
+      </section>
+
+      <section class="links-box">
+        <h2>LINKS</h2>
+        <p><a href="#" id="drive-link">📁 C:\</a></p>
+        <p><a href="#" data-fake-link="guestbook">📁 Guestbook</a></p>
+        <p><a href="#" data-fake-link="email">📁 Email</a></p>
+        <p><a href="#" data-fake-link="about">📁 About This Site</a></p>
+        <p><a href="#" data-fake-link="flash">📁 Old Flash</a></p>
+        <p><a href="#" data-fake-link="90s">📁 90's Stuff <span class="new">NEW!</span></a></p>
+        <p><a href="#" data-fake-link="danger">📁 Do Not Open <span class="danger">!!!</span></a></p>
+      </section>
+
+      <section class="junk">
+        <h2>MISSING_EAGLE.JPG</h2>
+        <img alt="[missing eagle]" class="broken-eagle" src="assets/this-file-does-not-exist.gif">
+        <p><a href="#" id="error-trigger">CLICK HERE FOR FREE APPLES!!!</a></p>
+        <p class="netscape">Best viewed in Netscape Navigator 4.0</p>
+        <p>This site owned by Apple Core Tattoo © 1998</p>
+      </section>
+
+      <section class="system-message">
+        <h2>SYSTEM_MESSAGE.TXT</h2>
+        <p>If something looks broken, you're probably doing it right.</p>
+        <p>Have fun.</p>
+      </section>
+    </div>
+  </main>
+
+  <div id="fx-layer" aria-hidden="true"></div>
+  <div id="error-layer" aria-live="polite"></div>
+
+  <div id="secret" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="secret-box">
+      <button class="modal-close" data-close="secret" aria-label="Close">X</button>
+      <h2>YOU CLICKED THE RIGHT SLASH.</h2>
+      <p>C:\APPLE\FLASH\SECRET</p>
+      <pre>journal_18.txt
+
+I clicked the wrong slash.
+
+It clicked back.</pre>
+    </div>
+  </div>
+
+  <div id="drive" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="window-box">
+      <div class="window-title">C:\APPLE\</div>
+      <button class="modal-close" data-close="drive" aria-label="Close">X</button>
+
+      <div class="folder-grid">
+        <button data-file="FLASH">📁 FLASH</button>
+        <button data-file="DO_NOT_OPEN">📁 DO_NOT_OPEN</button>
+        <button data-file="WORM">📁 WORM</button>
+        <button data-file="journal_04.txt">📄 journal_04.txt</button>
+      </div>
+
+      <pre id="file-output">Select a file.</pre>
+    </div>
+  </div>
+
+  <script src="dimension.js"></script>
+</body>
+</html>
       <pre id="cool-s" class="ascii-art small-art" aria-label="Cool S made of symbols"></pre>
     </section>
 
