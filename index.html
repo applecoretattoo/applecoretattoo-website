@@ -7,6 +7,7 @@
   <meta name="description" content="Apple Core Tattoo by Greg Sternin. Bold American Traditional tattooing serving Mesa, Gilbert and the East Valley.">
   <link rel="icon" href="assets/logo/favicon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portal.css">
 </head>
 <body>
   <header class="site-header">
@@ -34,6 +35,166 @@
           <a class="btn btn-primary" href="#start">Start Your Tattoo</a>
           <a class="btn btn-secondary" href="https://www.instagram.com/applecoretattoo/" target="_blank" rel="noopener">Follow on Instagram</a>
         </div>
+      </div>
+      <figure class="hero-photo paper-card">
+        <img src="assets/hero/greg-tattooing.jpg" alt="Greg Sternin tattooing at Apple Core Tattoo">
+        <figcaption>Traditional tattoos, built by hand.</figcaption>
+      </figure>
+    </section>
+
+    <section id="work" class="work section-pad compact">
+      <div class="section-heading">
+        <p class="eyebrow">Latest Tattoos</p>
+        <h2 class="shadow-title small">Flash book favorites.</h2>
+        <p>Swipe or use the arrows. A quick look at bold, readable work before you start your tattoo.</p>
+      </div>
+      <div class="carousel-wrap">
+        <button class="arrow prev" aria-label="Previous tattoo">‹</button>
+        <div class="carousel" id="carousel">
+          <figure class="slide"><a href="assets/gallery/01-jesus.jpg" data-lightbox><img src="assets/gallery/01-jesus.jpg" alt="Jesus portrait tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/02-clipper-ship.jpg" data-lightbox><img src="assets/gallery/02-clipper-ship.jpg" alt="Clipper ship tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/03-skeleton-driving.jpg" data-lightbox><img src="assets/gallery/03-skeleton-driving.jpg" alt="Skeleton tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/04-shark.jpg" data-lightbox><img src="assets/gallery/04-shark.jpg" alt="Traditional shark tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/05-snake-roadrunner.jpg" data-lightbox><img src="assets/gallery/05-snake-roadrunner.jpg" alt="Snake and roadrunner tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/06-sacred-heart-dove.jpg" data-lightbox><img src="assets/gallery/06-sacred-heart-dove.jpg" alt="Sacred heart and dove tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/07-eagle-snake-skull.jpg" data-lightbox><img src="assets/gallery/07-eagle-snake-skull.jpg" alt="Eagle snake and skull tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/08-boxing-frog.jpg" data-lightbox><img src="assets/gallery/08-boxing-frog.jpg" alt="Boxing frog tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/09-img_6074.jpg" data-lightbox><img src="assets/gallery/09-img_6074.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/10-img_6157.jpg" data-lightbox><img src="assets/gallery/10-img_6157.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/11-img_4639.jpg" data-lightbox><img src="assets/gallery/11-img_4639.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/12-img_3001.jpg" data-lightbox><img src="assets/gallery/12-img_3001.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/13-img_6026.jpg" data-lightbox><img src="assets/gallery/13-img_6026.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/14-img_7528.jpg" data-lightbox><img src="assets/gallery/14-img_7528.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/15-img_5172.jpg" data-lightbox><img src="assets/gallery/15-img_5172.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/16-img_6448.jpg" data-lightbox><img src="assets/gallery/16-img_6448.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+        </div>
+        <button class="arrow next" aria-label="Next tattoo">›</button>
+      </div>
+    </section>
+
+    <section id="start" class="start section-pad">
+      <div class="start-card">
+        <div>
+          <p class="eyebrow">Let's start simple</p>
+          <h2 class="shadow-title small">Start Your Tattoo</h2>
+          <p>Tell me the rough idea, where you want it, and how to text you back. If you have inspiration photos, great. If not, no problem — tattoo ideas evolve.</p>
+        </div>
+        <form name="tattoo-consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="consult-form" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="tattoo-consultation">
+          <p class="hidden"><label>Leave this blank: <input name="bot-field"></label></p>
+          <label>First name <input required name="name" type="text" autocomplete="given-name"></label>
+          <label>Phone number <input required name="phone" type="tel" autocomplete="tel"></label>
+          <label>Instagram handle <input name="instagram" type="text" placeholder="@yourname"></label>
+          <label>Tattoo idea <textarea required name="idea" rows="4" placeholder="Tell me what you’re thinking."></textarea></label>
+          <label>Placement <input name="placement" type="text" placeholder="Forearm, calf, chest, sleeve, etc."></label>
+          <label>Approximate size <input name="size" type="text" placeholder="Palm size, forearm size, full sleeve, etc."></label>
+          <fieldset class="radio-card">
+            <legend>Do you have inspiration photos?</legend>
+            <label class="radio"><input type="radio" name="inspiration" value="Yes, I have photos ready"> <span>Yes, I have photos ready</span></label>
+            <label class="radio"><input type="radio" name="inspiration" value="Not yet, I can send them later"> <span>Not yet, I can send them later</span></label>
+          </fieldset>
+          <label>Upload inspiration photos if you have them <input name="photos" type="file" multiple accept="image/*"></label>
+          <button class="btn btn-primary" type="submit">Send It Over</button>
+          <p class="form-note">Texting is the best way to reach me. Send one idea or twenty — it won't bother me. SMS alerts are coming soon; for now, requests save in Netlify Forms.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="meet" class="meet section-pad">
+      <figure class="paper-card meet-photo"><img src="assets/hero/greg-tattooing.jpg" alt="Greg tattooing a client"></figure>
+      <div class="meet-copy">
+        <p class="eyebrow">Meet the Artist</p>
+        <h2 class="shadow-title small">Tattoos should make you look more like yourself.</h2>
+        <p>I'm Greg Sternin, the artist behind Apple Core Tattoo. I love American Traditional tattooing because it is bold, readable, and built to age well.</p>
+        <p>Some clients come in with a full plan. Others only have a rough idea. Either way, we'll talk it through and build something you'll be proud to wear for life.</p>
+      </div>
+    </section>
+
+    <section class="full-gallery section-pad">
+      <div class="section-heading">
+        <p class="eyebrow">The Wall</p>
+        <h2 class="shadow-title small">More tattoo work</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-card"><a href="assets/gallery/01-jesus.jpg" data-lightbox><img src="assets/gallery/01-jesus.jpg" alt="Jesus portrait tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/02-clipper-ship.jpg" data-lightbox><img src="assets/gallery/02-clipper-ship.jpg" alt="Clipper ship tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/03-skeleton-driving.jpg" data-lightbox><img src="assets/gallery/03-skeleton-driving.jpg" alt="Skeleton tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/04-shark.jpg" data-lightbox><img src="assets/gallery/04-shark.jpg" alt="Traditional shark tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/05-snake-roadrunner.jpg" data-lightbox><img src="assets/gallery/05-snake-roadrunner.jpg" alt="Snake and roadrunner tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/06-sacred-heart-dove.jpg" data-lightbox><img src="assets/gallery/06-sacred-heart-dove.jpg" alt="Sacred heart and dove tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/07-eagle-snake-skull.jpg" data-lightbox><img src="assets/gallery/07-eagle-snake-skull.jpg" alt="Eagle snake and skull tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/08-boxing-frog.jpg" data-lightbox><img src="assets/gallery/08-boxing-frog.jpg" alt="Boxing frog tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/09-img_6074.jpg" data-lightbox><img src="assets/gallery/09-img_6074.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/10-img_6157.jpg" data-lightbox><img src="assets/gallery/10-img_6157.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/11-img_4639.jpg" data-lightbox><img src="assets/gallery/11-img_4639.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/12-img_3001.jpg" data-lightbox><img src="assets/gallery/12-img_3001.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/13-img_6026.jpg" data-lightbox><img src="assets/gallery/13-img_6026.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/14-img_7528.jpg" data-lightbox><img src="assets/gallery/14-img_7528.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/15-img_5172.jpg" data-lightbox><img src="assets/gallery/15-img_5172.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/16-img_6448.jpg" data-lightbox><img src="assets/gallery/16-img_6448.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
+      </div>
+    </section>
+
+    <section id="aftercare" class="aftercare section-pad compact">
+      <div class="note-card">
+        <p class="eyebrow">Aftercare</p>
+        <h2 class="shadow-title small">Keep it clean. Keep it simple.</h2>
+        <p>Follow the aftercare instructions I give you at the appointment. When in doubt, text me before guessing.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logo/apple-core-logo.png" alt="Apple Core Tattoo logo">
+    <p>Apple Core Tattoo • Mesa / Gilbert, AZ • <a href="https://www.instagram.com/applecoretattoo/" target="_blank" rel="noopener">@applecoretattoo</a></p>
+    <p class="tagline">Somewhat memorable. Built by hand.</p>
+    <p class="dimension-entry">
+      <a class="alternate-dimension-link" href="alternate-dimension.html">alternate dimension</a>
+    </p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button aria-label="Close image">×</button>
+    <img alt="Expanded tattoo image">
+  </div>
+
+  <a class="sticky-book" href="#start">Start Your Tattoo</a>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    document.querySelector('.next').addEventListener('click', () => carousel.scrollBy({left: 380, behavior:'smooth'}));
+    document.querySelector('.prev').addEventListener('click', () => carousel.scrollBy({left: -380, behavior:'smooth'}));
+
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('[data-lightbox]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        lbImg.src = a.href;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lbImg.src = '';
+    });
+
+    const portalLink = document.querySelector('.alternate-dimension-link');
+    if (portalLink) {
+      portalLink.addEventListener('click', () => {
+        localStorage.setItem('applecore_dimension_seen', 'yes');
+      });
+      if (localStorage.getItem('applecore_dimension_seen') === 'yes') {
+        portalLink.textContent = 'welcome back';
+      }
+    }
+  </script>
+</body>
+</html>
       </div>
       <figure class="hero-photo paper-card">
         <img src="assets/hero/greg-tattooing.jpg" alt="Greg Sternin tattooing at Apple Core Tattoo">
