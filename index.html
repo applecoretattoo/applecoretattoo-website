@@ -80,7 +80,7 @@
           <p>Tell me the rough idea, where you want it, and how to text you back. If you have inspiration photos, great. If not, no problem—tattoo ideas evolve.</p>
         </div>
 
-        <form id="consult-form" class="consult-form">
+        <form id="consult-form" class="consult-form" method="POST" action="https://apple-core-consultation-4353.twil.io/tattoo-consultation">
           <label>First name<input required name="name" type="text" autocomplete="given-name"></label>
           <label>Phone number<input required name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(480) 555-1234"></label>
           <label>Instagram handle<input name="instagram" type="text" placeholder="@yourname"></label>
@@ -197,48 +197,6 @@
       mysteryNav.addEventListener("blur", showDefault);
     }
 
-    const consultForm = document.getElementById("consult-form");
-    const consultSubmit = document.getElementById("consult-submit");
-    const consultStatus = document.getElementById("consult-status");
-
-    consultForm.addEventListener("submit", async event => {
-      event.preventDefault();
-      consultSubmit.disabled = true;
-      consultSubmit.textContent = "Sending...";
-      consultStatus.textContent = "Sending your tattoo idea to Greg...";
-
-      const formData = new FormData(consultForm);
-      const payload = {
-        name:String(formData.get("name") || "").trim(),
-        phone:String(formData.get("phone") || "").trim(),
-        instagram:String(formData.get("instagram") || "").trim(),
-        idea:String(formData.get("idea") || "").trim(),
-        placement:String(formData.get("placement") || "").trim(),
-        size:String(formData.get("size") || "").trim(),
-        inspiration:String(formData.get("inspiration") || "").trim(),
-        sms_consent:formData.get("sms_consent") === "yes" ? "yes" : "no"
-      };
-
-      try {
-        const response = await fetch(TWILIO_FUNCTION_URL, {
-          method:"POST",
-          headers:{"Content-Type":"application/json"},
-          body:JSON.stringify(payload)
-        });
-
-        const result = await response.json().catch(() => ({}));
-        if (!response.ok || !result.success) {
-          throw new Error(result.message || "The consultation could not be sent.");
-        }
-
-        window.location.href = "thanks.html";
-      } catch (error) {
-        console.error(error);
-        consultStatus.textContent = error.message || "Something went wrong. Please try again or text (480) 454-7492.";
-        consultSubmit.disabled = false;
-        consultSubmit.textContent = "Send It Over";
-      }
-    });
   </script>
 </body>
 </html>
