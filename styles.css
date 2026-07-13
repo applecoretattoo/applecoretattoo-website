@@ -336,3 +336,24 @@ body:after{
   .paper-card,.slide,.gallery-card{padding:.7rem .7rem 2.05rem}
   .eyebrow{padding:.25rem .45rem}
 }
+/* Consultation form readability fixes */
+
+.consult-form .form-note,
+.consult-form .form-note a {
+  color: #2a2119;
+  opacity: 1;
+}
+
+.consult-form .form-note a {
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.sms-consent {
+  color: #2a2119;
+}
+
+#consult-status {
+  color: #2a2119;
+  font-weight: 800;
+}
