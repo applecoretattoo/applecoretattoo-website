@@ -7,14 +7,15 @@
   <meta name="description" content="Apple Core Tattoo by Greg Sternin. Bold American Traditional tattooing serving Mesa, Gilbert and the East Valley.">
   <link rel="icon" href="assets/logo/favicon.png">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="portal.css">
 </head>
+
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Apple Core Tattoo home">
       <img src="assets/logo/apple-core-logo.png" alt="Apple Core Tattoo logo">
       <span>Apple Core Tattoo</span>
     </a>
+
     <nav>
       <a href="#work">Work</a>
       <a href="#start">Start Your Tattoo</a>
@@ -30,12 +31,14 @@
         <img class="hero-logo" src="assets/logo/apple-core-logo.png" alt="Apple Core Tattoo logo">
         <h1 class="shadow-title">Wear Your Personality on Your Sleeve.</h1>
         <p class="hero-sub">Timeless tattoos for people who refuse to blend in.</p>
-        <p class="location">Serving Mesa, Gilbert & the East Valley.</p>
+        <p class="location">Serving Mesa, Gilbert &amp; the East Valley.</p>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="#start">Start Your Tattoo</a>
           <a class="btn btn-secondary" href="https://www.instagram.com/applecoretattoo/" target="_blank" rel="noopener">Follow on Instagram</a>
         </div>
       </div>
+
       <figure class="hero-photo paper-card">
         <img src="assets/hero/greg-tattooing.jpg" alt="Greg Sternin tattooing at Apple Core Tattoo">
         <figcaption>Traditional tattoos, built by hand.</figcaption>
@@ -48,12 +51,14 @@
         <h2 class="shadow-title small">Flash book favorites.</h2>
         <p>Swipe or use the arrows. A quick look at bold, readable work before you start your tattoo.</p>
       </div>
+
       <div class="carousel-wrap">
-        <button class="arrow prev" aria-label="Previous tattoo">‹</button>
+        <button class="arrow prev" type="button" aria-label="Previous tattoo">‹</button>
+
         <div class="carousel" id="carousel">
           <figure class="slide"><a href="assets/gallery/01-jesus.jpg" data-lightbox><img src="assets/gallery/01-jesus.jpg" alt="Jesus portrait tattoo" loading="lazy"></a></figure>
           <figure class="slide"><a href="assets/gallery/02-clipper-ship.jpg" data-lightbox><img src="assets/gallery/02-clipper-ship.jpg" alt="Clipper ship tattoo" loading="lazy"></a></figure>
-          <figure class="slide"><a href="assets/gallery/03-skeleton-driving.jpg" data-lightbox><img src="assets/gallery/03-skeleton-driving.jpg" alt="Skeleton tattoo" loading="lazy"></a></figure>
+          <figure class="slide"><a href="assets/gallery/03-skeleton-driving.jpg" data-lightbox><img src="assets/gallery/03-skeleton-driving.jpg" alt="Skeleton driving tattoo" loading="lazy"></a></figure>
           <figure class="slide"><a href="assets/gallery/04-shark.jpg" data-lightbox><img src="assets/gallery/04-shark.jpg" alt="Traditional shark tattoo" loading="lazy"></a></figure>
           <figure class="slide"><a href="assets/gallery/05-snake-roadrunner.jpg" data-lightbox><img src="assets/gallery/05-snake-roadrunner.jpg" alt="Snake and roadrunner tattoo" loading="lazy"></a></figure>
           <figure class="slide"><a href="assets/gallery/06-sacred-heart-dove.jpg" data-lightbox><img src="assets/gallery/06-sacred-heart-dove.jpg" alt="Sacred heart and dove tattoo" loading="lazy"></a></figure>
@@ -68,7 +73,8 @@
           <figure class="slide"><a href="assets/gallery/15-img_5172.jpg" data-lightbox><img src="assets/gallery/15-img_5172.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
           <figure class="slide"><a href="assets/gallery/16-img_6448.jpg" data-lightbox><img src="assets/gallery/16-img_6448.jpg" alt="Apple Core tattoo work" loading="lazy"></a></figure>
         </div>
-        <button class="arrow next" aria-label="Next tattoo">›</button>
+
+        <button class="arrow next" type="button" aria-label="Next tattoo">›</button>
       </div>
     </section>
 
@@ -77,31 +83,91 @@
         <div>
           <p class="eyebrow">Let's start simple</p>
           <h2 class="shadow-title small">Start Your Tattoo</h2>
-          <p>Tell me the rough idea, where you want it, and how to text you back. If you have inspiration photos, great. If not, no problem — tattoo ideas evolve.</p>
+          <p>Tell me the rough idea, where you want it, and how to text you back. If you have inspiration photos, great. If not, no problem—tattoo ideas evolve.</p>
         </div>
-        <form name="tattoo-consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html" class="consult-form" enctype="multipart/form-data">
-          <input type="hidden" name="form-name" value="tattoo-consultation">
-          <p class="hidden"><label>Leave this blank: <input name="bot-field"></label></p>
-          <label>First name <input required name="name" type="text" autocomplete="given-name"></label>
-          <label>Phone number <input required name="phone" type="tel" autocomplete="tel"></label>
-          <label>Instagram handle <input name="instagram" type="text" placeholder="@yourname"></label>
-          <label>Tattoo idea <textarea required name="idea" rows="4" placeholder="Tell me what you’re thinking."></textarea></label>
-          <label>Placement <input name="placement" type="text" placeholder="Forearm, calf, chest, sleeve, etc."></label>
-          <label>Approximate size <input name="size" type="text" placeholder="Palm size, forearm size, full sleeve, etc."></label>
+
+        <form id="consult-form" class="consult-form">
+          <label>
+            First name
+            <input required name="name" type="text" autocomplete="given-name">
+          </label>
+
+          <label>
+            Phone number
+            <input required name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(480) 555-1234">
+          </label>
+
+          <label>
+            Instagram handle
+            <input name="instagram" type="text" placeholder="@yourname">
+          </label>
+
+          <label>
+            Tattoo idea
+            <textarea required name="idea" rows="4" placeholder="Tell me what you’re thinking."></textarea>
+          </label>
+
+          <label>
+            Placement
+            <input name="placement" type="text" placeholder="Forearm, calf, chest, sleeve, etc.">
+          </label>
+
+          <label>
+            Approximate size
+            <input name="size" type="text" placeholder="Palm size, forearm size, full sleeve, etc.">
+          </label>
+
           <fieldset class="radio-card">
             <legend>Do you have inspiration photos?</legend>
-            <label class="radio"><input type="radio" name="inspiration" value="Yes, I have photos ready"> <span>Yes, I have photos ready</span></label>
-            <label class="radio"><input type="radio" name="inspiration" value="Not yet, I can send them later"> <span>Not yet, I can send them later</span></label>
+
+            <label class="radio">
+              <input type="radio" name="inspiration" value="Yes, I have photos ready">
+              <span>Yes, I have photos ready</span>
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="inspiration" value="Not yet, I can send them later">
+              <span>Not yet, I can send them later</span>
+            </label>
           </fieldset>
-          <label>Upload inspiration photos if you have them <input name="photos" type="file" multiple accept="image/*"></label>
-          <button class="btn btn-primary" type="submit">Send It Over</button>
-          <p class="form-note">Texting is the best way to reach me. Send one idea or twenty — it won't bother me. SMS alerts are coming soon; for now, requests save in Netlify Forms.</p>
+
+          <p class="form-note">
+            After you submit, you can reply to the confirmation text with your inspiration photos.
+          </p>
+
+          <label class="radio-card sms-consent">
+            <span class="radio">
+              <input type="checkbox" name="sms_consent" value="yes">
+              <span>
+                I agree to receive text messages from Apple Core Tattoo about my consultation,
+                design, scheduling, appointment reminders, and customer support. Message frequency
+                varies. Message and data rates may apply. Reply STOP to opt out or HELP for help.
+                Consent is optional and is not required to submit this form.
+              </span>
+            </span>
+          </label>
+
+          <p class="form-note">
+            By submitting, you acknowledge our
+            <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+            and
+            <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>.
+          </p>
+
+          <button class="btn btn-primary" id="consult-submit" type="submit">Send It Over</button>
+
+          <p class="form-note" id="consult-status" role="status" aria-live="polite">
+            Texting is the best way to reach me. Send one idea or twenty—it won't bother me.
+          </p>
         </form>
       </div>
     </section>
 
     <section id="meet" class="meet section-pad">
-      <figure class="paper-card meet-photo"><img src="assets/hero/greg-tattooing.jpg" alt="Greg tattooing a client"></figure>
+      <figure class="paper-card meet-photo">
+        <img src="assets/hero/greg-tattooing.jpg" alt="Greg tattooing a client">
+      </figure>
+
       <div class="meet-copy">
         <p class="eyebrow">Meet the Artist</p>
         <h2 class="shadow-title small">Tattoos should make you look more like yourself.</h2>
@@ -115,10 +181,11 @@
         <p class="eyebrow">The Wall</p>
         <h2 class="shadow-title small">More tattoo work</h2>
       </div>
+
       <div class="gallery-grid">
         <figure class="gallery-card"><a href="assets/gallery/01-jesus.jpg" data-lightbox><img src="assets/gallery/01-jesus.jpg" alt="Jesus portrait tattoo" loading="lazy"></a></figure>
         <figure class="gallery-card"><a href="assets/gallery/02-clipper-ship.jpg" data-lightbox><img src="assets/gallery/02-clipper-ship.jpg" alt="Clipper ship tattoo" loading="lazy"></a></figure>
-        <figure class="gallery-card"><a href="assets/gallery/03-skeleton-driving.jpg" data-lightbox><img src="assets/gallery/03-skeleton-driving.jpg" alt="Skeleton tattoo" loading="lazy"></a></figure>
+        <figure class="gallery-card"><a href="assets/gallery/03-skeleton-driving.jpg" data-lightbox><img src="assets/gallery/03-skeleton-driving.jpg" alt="Skeleton driving tattoo" loading="lazy"></a></figure>
         <figure class="gallery-card"><a href="assets/gallery/04-shark.jpg" data-lightbox><img src="assets/gallery/04-shark.jpg" alt="Traditional shark tattoo" loading="lazy"></a></figure>
         <figure class="gallery-card"><a href="assets/gallery/05-snake-roadrunner.jpg" data-lightbox><img src="assets/gallery/05-snake-roadrunner.jpg" alt="Snake and roadrunner tattoo" loading="lazy"></a></figure>
         <figure class="gallery-card"><a href="assets/gallery/06-sacred-heart-dove.jpg" data-lightbox><img src="assets/gallery/06-sacred-heart-dove.jpg" alt="Sacred heart and dove tattoo" loading="lazy"></a></figure>
@@ -146,44 +213,127 @@
 
   <footer>
     <img src="assets/logo/apple-core-logo.png" alt="Apple Core Tattoo logo">
+
     <p>
       Apple Core Tattoo • Mesa / Gilbert, AZ •
       <a href="https://www.instagram.com/applecoretattoo/" target="_blank" rel="noopener">@applecoretattoo</a>
     </p>
+
     <p class="tagline">Somewhat memorable. Built by hand.</p>
+
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      &nbsp;•&nbsp;
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </p>
+
     <p class="dimension-entry">
-      <a class="alternate-dimension-link" href="alternate-dimension.html">alternate dimension</a>
+      <a class="alternate-dimension-link" href="alternate-dimension.html">
+        alternate dimension
+      </a>
     </p>
   </footer>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button aria-label="Close image">×</button>
+    <button type="button" aria-label="Close image">×</button>
     <img alt="Expanded tattoo image">
   </div>
 
   <a class="sticky-book" href="#start">Start Your Tattoo</a>
 
   <script>
-    const carousel = document.getElementById('carousel');
-    document.querySelector('.next').addEventListener('click', () => carousel.scrollBy({left: 380, behavior:'smooth'}));
-    document.querySelector('.prev').addEventListener('click', () => carousel.scrollBy({left: -380, behavior:'smooth'}));
+    const TWILIO_FUNCTION_URL =
+      "https://apple-core-consultation-4353.twil.io/tattoo-consultation";
 
-    const lightbox = document.getElementById('lightbox');
-    const lbImg = lightbox.querySelector('img');
+    const carousel = document.getElementById("carousel");
+    const nextButton = document.querySelector(".next");
+    const previousButton = document.querySelector(".prev");
 
-    document.querySelectorAll('[data-lightbox]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        lbImg.src = a.href;
-        lightbox.classList.add('open');
-        lightbox.setAttribute('aria-hidden', 'false');
+    nextButton?.addEventListener("click", () => {
+      carousel.scrollBy({ left: 380, behavior: "smooth" });
+    });
+
+    previousButton?.addEventListener("click", () => {
+      carousel.scrollBy({ left: -380, behavior: "smooth" });
+    });
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = lightbox.querySelector("img");
+    const lightboxClose = lightbox.querySelector("button");
+
+    document.querySelectorAll("[data-lightbox]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        lightboxImage.src = link.href;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
       });
     });
 
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      lbImg.src = '';
+    const closeLightbox = () => {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+    };
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) {
+        closeLightbox();
+      }
+    });
+
+    const consultForm = document.getElementById("consult-form");
+    const consultSubmit = document.getElementById("consult-submit");
+    const consultStatus = document.getElementById("consult-status");
+
+    consultForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      consultSubmit.disabled = true;
+      consultSubmit.textContent = "Sending...";
+      consultStatus.textContent = "Sending your tattoo idea to Greg...";
+
+      const formData = new FormData(consultForm);
+      const payload = new URLSearchParams();
+
+      for (const [key, value] of formData.entries()) {
+        payload.append(key, value);
+      }
+
+      try {
+        const response = await fetch(TWILIO_FUNCTION_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+          },
+          body: payload.toString()
+        });
+
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok || !result.success) {
+          throw new Error(
+            result.message || "The consultation could not be sent."
+          );
+        }
+
+        window.location.href = "thanks.html";
+      } catch (error) {
+        console.error(error);
+        consultStatus.textContent =
+          error.message ||
+          "Something went wrong. Please try again or text (480) 454-7492.";
+        consultSubmit.disabled = false;
+        consultSubmit.textContent = "Send It Over";
+      }
     });
   </script>
 </body>
