@@ -357,3 +357,44 @@ body:after{
   color: #2a2119;
   font-weight: 800;
 }
+/* Force consultation text to remain readable */
+
+.consult-form .form-note,
+
+.consult-form .form-note *,
+
+.consult-form .sms-consent,
+
+.consult-form .sms-consent *,
+
+#consult-status {
+
+  color: #2a2119 !important;
+
+  opacity: 1 !important;
+
+  visibility: visible !important;
+
+}
+
+.consult-form .form-note {
+
+  font-weight: 700 !important;
+
+}
+
+.consult-form .form-note a {
+
+  color: #2a2119 !important;
+
+  font-weight: 900 !important;
+
+  text-decoration: underline !important;
+
+}
+
+#consult-status {
+
+  font-weight: 900 !important;
+
+}
