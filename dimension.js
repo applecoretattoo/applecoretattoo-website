@@ -27,22 +27,91 @@ const apple = String.raw`
 `;
 
 const coolS = String.raw`
-             /\
-            /  \
-           | | |
-           | | |
-          /  |  \
-         /   |   \
-        /    |    \
-       /     |     \
-       \     |     /
-        \    |    /
-         \   |   /
-          \  |  /
-           | | |
-           | | |
-            \  /
-             \/
+                                                                                             xxx                  
+                                                                                          xxxx                    
+                                                                                        xxxxx                     
+                                                                                      xxxx xx                     
+                                                                                     xxx   xx                     
+                                                                  x                 xxx    xxx                    
+                                                                  xxxx              xx      xxx                   
+                                                                   xxxxxx           xx       xxx                  
+                                                                     xx  xxx        x         xxx                 
+                                                                      xx   xx       xx         xxx                
+                                                                      xx    xx      xxx         xxxx              
+                                                                     xxx     x       xxx          xx              
+                                                                     xx     xx        xx          xxx             
+                                           xx                      xxxx    xx          xx          xxx            
+                                         xxx                      xxx     xxx           xx          xx            
+                                       xxx                       xx      xxx            xx          xx            
+                                      xx x                       xx     xxx             x            x            
+                                     xx  x                      xx      xxx            xx           xx            
+                                     x   xx                     xxx     xxx           xxx           xx            
+                     xx             xx     xx                   xxx      xxx       xxxxx            xx            
+                      xxxx          xx      xxx                  xxx      xxxxxxxxxxxx             xx        x    
+                        xxxx        x         xxx                xxx         xxxxx                xx       xxx    
+                         x xxx      xx          xxx               xxx                           xxx     xxxx      
+                         x   xx      x            xx               xxx                         xxx    xxxxx       
+                         x    xx      xx           xx               xxxx                     xxxx     xxxxx       
+                        xx     xx      xx           x                xxxx                   xxx      xxx x        
+                       xx      x        x           x                 xxxx                 xx        xx  x        
+                      xx      xx        x           x                  xxx                xx        xx   xx       
+                     xx       x         x          xx                   xxx              xx         xx   xxx      
+                   xxx       xx        xx          xx                   x x             xx          xxx   xxx     
+                   xx        xxxxxxxxxxx           xx                   xxx             x            xx    xxx    
+                   xx           xxxxxxx             x                   xx             xx            xx     xxx   
+xxx                xx                               x        xxx       xx              xx            xx      xxx  
+ xxxxxx             xx                              xx     xxxxxxx    xx                xx           xx        x  
+   xxxxxxxx           xx                              xxxxxxxxxxxxxxxxx                  xxx      xxxx         xx 
+      xxx xxx          xxx                             xxxxxx   xxxxxx                    xxxxxxxxxxx          xx 
+        xxx  xxx         xxx                         xxxxx        xxxxxxx                                      xxx
+         xx    xxx         xxx                     xxxxx            xxxxxxx                                    xxx
+         xx      xx          xx                  xxxxx                xxxxxxx                                  xxx
+          xx      xx          x                xxxxxx                  xxxxxxxx                                 xx
+          xx       xx        xx              xxxxx                       xxxxxxxx                              xxx
+         xxx        x        xx            xxxxx                          xxxxxxxx                            xxx 
+         xx         x      xxxx          xxxxxx                             xxxxxxx                           xx  
+         xx         xxxxxxxxxx         xxxxxx                                xxxxxxx                         xx   
+         x           xxxxxxx          xxxxxx                                    xxxxx                      xxx    
+        xx                            xxxxxx                xxxxxx             xxxxxx                    xxx      
+        xx                            xxxxxx                xxxxxx             xxxxxx                 xxxx        
+        xx                            xxxxxx                xxxxxx             xxxxxx            xxxxx            
+         xx                           xxxxxx                xxxxxx             xxxxxx        xxxxx                
+         xxxx                         xxxxxx                xxxxxx             xxxxxx      xxxx                   
+           xxxx                       xxxxxx                xxxxxx             xxxxxx    xxxx                     
+             xxxxxxxx             xxxxxxxxxx                xxxxxx             xxxxxx   xxx                       
+                xxxxxxxxxxxxxxxxxxx   xxxxxx                xxxxxx             xxxxxx xxx                         
+                                      xxxxxx                xxxxxx             xxxxxxxx                           
+                                      xxxxxxx               xxxxxx             xxxxxxxx                           
+                                        xxxxxxxx             xxxxxxx      xxxxxxxxxx                              
+                                             xxxxxx             xxxxxxxxxxxxxxx                                   
+                                                xxxxxx             xxxxxxxx                                       
+                                                   xxxxx             xxxxxxx                                      
+                                                   xxxxxxxx              xxxxxx                                   
+                                              xxxxxxxxxxxxxxxx              xxxxxx                                
+                                        xxxxxxxxxxx        xxxxxx             xxxxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxxx                xxxxx               xxxxx                             
+                                      xxxxx                                     xxxxx                             
+                                       xxxxxxx                                xxxxx                               
+                                         xxxxxxxx                           xxxx                                  
+                                           xxxxxxxx                      xxxxxx                                   
+                                             xxxxxxxx                   xxxx                                      
+                                               xxxxxxxx              xxxxx                                        
+                                                  xxxxxxx          xxxxxx                                         
+                                                    xxxxxxxx      xxxxx                                           
+                                                      xxxxxxxx xxxxxx                                             
+                                                         xxxxxxxxxx                                               
+                                                            xxxxx                                                 
+                                                              x                                                   
 `;
 
 const messages = [
