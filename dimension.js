@@ -27,7 +27,7 @@ const apple = String.raw`
    0000           000000      0000    
       00000000000000000000000000      
                00                     
-               
+ `;              
 const coolS = String.raw`
        **   *                 **      **          
       ***   **                 **    **           
@@ -380,3 +380,49 @@ console.log(
 );
 
 console.log("apple_03 isn't real anymore.");
+/* Fit the new keyboard artwork inside its boxes */
+
+.ascii-zone {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.ascii-art {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: pre;
+  line-height: 1;
+  letter-spacing: 0;
+  font-family: "Courier New", Courier, monospace;
+  transform-origin: top left;
+}
+
+.apple-art {
+  font-size: clamp(4px, 0.72vw, 11px) !important;
+}
+
+.cool-s-art {
+  font-size: clamp(2px, 0.42vw, 6px) !important;
+}
+
+@media (max-width: 900px) {
+  .apple-art {
+    font-size: clamp(3px, 1.15vw, 7px) !important;
+  }
+
+  .cool-s-art {
+    font-size: clamp(1.5px, 0.62vw, 4px) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .apple-art {
+    font-size: 3px !important;
+  }
+
+  .cool-s-art {
+    font-size: 1.65px !important;
+  }
+}
